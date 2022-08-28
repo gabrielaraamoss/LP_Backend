@@ -24,18 +24,6 @@ module.exports = (sequelize, DataTypes) => {
             },
           },
         },
-        date: {
-          type: DataTypes.STRING,
-          allowNull: false,
-          validate: {
-            notNull: {
-              msg: "Date is missing",
-            },
-            notEmpty: {
-              msg: "Date must not be empty",
-            },
-          },
-        },
         publication: {
           type: DataTypes.STRING,
           allowNull: false,

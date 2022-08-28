@@ -33,9 +33,7 @@ router.get("/:idPublication", (req, res, next) => {
 router.post("/", function (req, res, next) {
   models.posts
     .create({
-      id: req.body.id,
       name: req.body.name,
-      date: req.body.date,
       publication: req.body.publication,
     })
     .then(function (publication) {
@@ -50,7 +48,6 @@ router.put("/", (req, res, next) => {
       .update({
         id: req.body.id,
         name: req.body.name,
-        date: req.body.date,
         publication: req.body.publication,
       })
       .then((publication) => {
